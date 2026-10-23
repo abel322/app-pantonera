@@ -1,7 +1,8 @@
-const CACHE_NAME = 'pantonera-cache-v1';
+const CACHE_NAME = 'pantonera-cache-v2';
 const STATIC_ASSETS = [
   '/',
   '/manifest.json',
+  '/data/pantone-database.json',
   '/icon-192.png',
   '/icon-512.png',
   '/apple-touch-icon.png'

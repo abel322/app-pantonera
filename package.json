@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "generate-catalog": "node --experimental-strip-types scripts/generate-pantone-catalog.ts"
   },
   "dependencies": {
     "clsx": "^2.1.1",

@@ -10,6 +10,7 @@ export interface PantoneColor {
   hex: string;            // Código HEX para la muestra visual en la UI
   family: string;         // Familia cromática (ej: "Amarillos", "Azules", "Naranjas", "Violetas")
   formula: InkComponent[];
+  isCustom?: boolean;     // Indica si fue formulado en taller o importado manualmente
 }
 
 export interface CalculatedDose {
@@ -19,3 +20,20 @@ export interface CalculatedDose {
 }
 
 export type WeightUnit = 'g' | 'kg';
+
+export const OFFICIAL_BASE_INKS = [
+  'PANTONE Yellow PY12',
+  'PANTONE Orange 016',
+  'PANTONE Warm Red',
+  'PANTONE Rubine Red',
+  'PANTONE Rhodamine Red',
+  'PANTONE Purple',
+  'PANTONE Violet v2',
+  'PANTONE Pro. Blue',
+  'PANTONE Reflex Blue',
+  'PANTONE Process Blue',
+  'PANTONE Green',
+  'PANTONE Black',
+  'PANTONE Trans. Wt.',
+  'PANTONE Opaque Wt.',
+] as const;

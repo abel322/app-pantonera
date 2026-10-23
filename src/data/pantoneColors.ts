@@ -285,5 +285,5 @@ export const PANTONE_COLORS: PantoneColor[] = [
   },
 ];
 
-export const FAMILIES = ['Todos', 'Favoritos', 'Amarillos', 'Azules', 'Naranjas', 'Rojos', 'Verdes', 'Violetas', 'Neutros'] as const;
+export const FAMILIES = ['Todos', 'Favoritos', 'Taller', 'Amarillos', 'Azules', 'Naranjas', 'Rojos', 'Verdes', 'Violetas', 'Neutros'] as const;
 export type ColorFamily = typeof FAMILIES[number];

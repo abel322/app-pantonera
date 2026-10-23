@@ -60,11 +60,16 @@ export const ColorCard: React.FC<ColorCardProps> = ({
           />
         </button>
 
-        {/* Family Pill */}
-        <div className="absolute bottom-2.5 left-2.5">
+        {/* Family Pill & Custom Tag */}
+        <div className="absolute bottom-2.5 left-2.5 flex items-center gap-1.5">
           <span className="px-2.5 py-1 rounded-md text-[11px] font-bold tracking-wider uppercase bg-black/60 backdrop-blur-md text-white border border-white/10 shadow-sm">
             {color.family}
           </span>
+          {color.isCustom && (
+            <span className="px-2 py-1 rounded-md text-[10px] font-black tracking-wider uppercase bg-amber-400 text-black shadow-md shadow-amber-400/30">
+              Taller
+            </span>
+          )}
         </div>
       </div>
 
