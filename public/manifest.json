@@ -1,0 +1,27 @@
+{
+  "name": "Pantonera Pro - Guía de Formulación y Dosificación",
+  "short_name": "Pantonera",
+  "description": "Calculadora móvil de formulación de colores tipo Pantone (Solid Coated) y dosificación en tiempo real para operarios de taller.",
+  "start_url": "/",
+  "id": "/",
+  "display": "standalone",
+  "background_color": "#09090b",
+  "theme_color": "#09090b",
+  "orientation": "portrait",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["utilities", "productivity", "business"]
+}
