@@ -252,19 +252,67 @@ export const DataManagementModal: React.FC<DataManagementModalProps> = ({
                 </div>
               </div>
 
-              {/* CSV Format Reference Box */}
-              <div className="p-3.5 rounded-2xl bg-zinc-900/60 border border-zinc-800 text-xs space-y-1.5">
-                <div className="flex items-center gap-1.5 text-zinc-300 font-bold">
-                  <HelpCircle className="w-4 h-4 text-amber-400" />
-                  <span>Formato CSV esperado en taller:</span>
+              {/* CSV Format Reference Box & Direct Paste */}
+              <div className="p-3.5 rounded-2xl bg-zinc-900/60 border border-zinc-800 text-xs space-y-2.5">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-1.5 text-zinc-300 font-bold">
+                    <HelpCircle className="w-4 h-4 text-amber-400" />
+                    <span>Formato CSV / Excel de Planta:</span>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      const sampleCsv = `Codigo,Nombre,HEX,Familia,Tinta1:Porcentaje1,Tinta2:Porcentaje2,Tinta3:Porcentaje3\n285 C,PANTONE 285 C,#0072CE,Azules,PANTONE Pro. Blue:37.11,PANTONE Violet v2:13.75,PANTONE Trans. Wt.:49.14\n100 C,PANTONE 100 C,#F6EB61,Amarillos,PANTONE Yellow PY12:15.43,PANTONE Orange 016:0.41,PANTONE Opaque Wt.:14.03,PANTONE Trans. Wt.:70.13\n`;
+                      const blob = new Blob([sampleCsv], { type: 'text/csv;charset=utf-8;' });
+                      const url = URL.createObjectURL(blob);
+                      const a = document.createElement('a');
+                      a.href = url;
+                      a.download = 'plantilla-pantone-taller.csv';
+                      a.click();
+                      URL.revokeObjectURL(url);
+                    }}
+                    className="text-[11px] font-bold text-amber-400 hover:text-amber-300 underline"
+                  >
+                    Descargar Plantilla CSV de Ejemplo
+                  </button>
                 </div>
-                <pre className="font-mono text-[11px] bg-black/60 p-2.5 rounded-xl text-zinc-300 overflow-x-auto border border-zinc-800">
+                <pre className="font-mono text-[11px] bg-black/60 p-2 rounded-xl text-zinc-300 overflow-x-auto border border-zinc-800">
                   Codigo,Nombre,HEX,Familia,Tinta1:Porcentaje1,Tinta2:Porcentaje2,...
                   <br />
                   <span className="text-zinc-500">
-                    Ejemplo: 285 C,PANTONE 285 C,#0072CE,Azules,PANTONE Pro. Blue:87.50,PANTONE Reflex Blue:12.50
+                    Ejemplo: 285 C,PANTONE 285 C,#0072CE,Azules,PANTONE Pro. Blue:37.11,PANTONE Violet v2:13.75,PANTONE Trans. Wt.:49.14
                   </span>
                 </pre>
+
+                {/* Direct Paste Area */}
+                <div className="pt-1">
+                  <label className="block text-[11px] font-bold text-zinc-400 mb-1">
+                    O pega texto CSV directamente aquí (desde Excel o correo):
+                  </label>
+                  <div className="flex gap-2">
+                    <textarea
+                      rows={2}
+                      placeholder="Pega aquí filas CSV de Excel..."
+                      id="direct-csv-input"
+                      className="flex-1 p-2 bg-zinc-950 border border-zinc-800 rounded-xl font-mono text-[11px] text-white placeholder-zinc-600 outline-none focus:border-amber-400"
+                    />
+                    <button
+                      type="button"
+                      onClick={() => {
+                        const el = document.getElementById('direct-csv-input') as HTMLTextAreaElement;
+                        if (el && el.value.trim()) {
+                          const { colors, errors } = parseCSVColors(el.value);
+                          setParsedPreview(colors);
+                          setImportErrors(errors);
+                          setImportFileName('Texto Pegado');
+                        }
+                      }}
+                      className="px-3 rounded-xl bg-zinc-800 hover:bg-zinc-700 text-amber-400 text-xs font-bold border border-zinc-700"
+                    >
+                      Procesar
+                    </button>
+                  </div>
+                </div>
               </div>
 
               {/* Validation errors */}

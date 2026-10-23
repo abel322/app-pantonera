@@ -14,6 +14,7 @@ import {
   ChevronDown,
   Layers,
   Wrench,
+  Camera,
 } from 'lucide-react';
 import { PANTONE_COLORS, FAMILIES, ColorFamily } from '@/data/pantoneColors';
 import { PantoneColor } from '@/types/pantone';
@@ -22,6 +23,7 @@ import { ColorCard } from '@/components/ColorCard';
 import { DosingModal } from '@/components/DosingModal';
 import { DataManagementModal } from '@/components/DataManagementModal';
 import { CreateColorModal } from '@/components/CreateColorModal';
+import { ScanColorModal } from '@/components/ScanColorModal';
 import {
   getCustomColors,
   CUSTOM_COLORS_EVENT,
@@ -67,6 +69,7 @@ export default function HomePage() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isDataModalOpen, setIsDataModalOpen] = useState(false);
   const [isCreateModalOpen, setIsCreateModalOpen] = useState(false);
+  const [isScanModalOpen, setIsScanModalOpen] = useState(false);
 
   // Catálogo base cargado desde /data/pantone-database.json
   const [baseColors, setBaseColors] = useState<PantoneColor[]>(PANTONE_COLORS);
@@ -260,6 +263,17 @@ export default function HomePage() {
 
           {/* Plant Workshop Header Action Buttons */}
           <div className="flex items-center gap-2">
+            {/* Escanear Tira Pantone Física */}
+            <button
+              type="button"
+              onClick={() => setIsScanModalOpen(true)}
+              className="px-3 py-1.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-black text-xs font-black transition-all shadow-md shadow-emerald-500/20 active:scale-95 flex items-center gap-1.5"
+              title="Escanear con cámara o subir foto de una tira física de la pantonera"
+            >
+              <Camera className="w-4 h-4 stroke-[2.5]" />
+              <span className="hidden sm:inline">Escanear Tira</span>
+            </button>
+
             {/* Nueva Fórmula Button */}
             <button
               type="button"
@@ -473,15 +487,24 @@ export default function HomePage() {
         )}
       </main>
 
-      {/* Floating Action Button (FAB) on Mobile for In-Plant Formula Creation */}
-      <div className="fixed bottom-6 right-5 z-40 sm:hidden">
+      {/* Floating Action Buttons (FAB) on Mobile */}
+      <div className="fixed bottom-6 right-5 z-40 sm:hidden flex flex-col gap-2.5">
+        <button
+          type="button"
+          onClick={() => setIsScanModalOpen(true)}
+          aria-label="Escanear tira física con cámara"
+          className="w-13 h-13 rounded-2xl bg-emerald-500 text-black flex items-center justify-center shadow-xl shadow-emerald-500/40 border border-emerald-400 font-black active:scale-90 transition-transform"
+        >
+          <Camera className="w-6 h-6 stroke-[2.5]" />
+        </button>
+
         <button
           type="button"
           onClick={() => setIsCreateModalOpen(true)}
           aria-label="Dar de alta fórmula en planta"
-          className="w-14 h-14 rounded-2xl bg-amber-400 text-black flex items-center justify-center shadow-xl shadow-amber-400/40 border border-amber-300 font-black active:scale-90 transition-transform"
+          className="w-13 h-13 rounded-2xl bg-amber-400 text-black flex items-center justify-center shadow-xl shadow-amber-400/40 border border-amber-300 font-black active:scale-90 transition-transform"
         >
-          <Plus className="w-7 h-7 stroke-[3]" />
+          <Plus className="w-6 h-6 stroke-[3]" />
         </button>
       </div>
 
@@ -514,6 +537,16 @@ export default function HomePage() {
         isOpen={isCreateModalOpen}
         onClose={() => setIsCreateModalOpen(false)}
         onColorCreated={(newColor) => {
+          setSelectedColor(newColor);
+          setIsModalOpen(true);
+        }}
+      />
+
+      {/* Physical Strip Camera & OCR Scan Modal */}
+      <ScanColorModal
+        isOpen={isScanModalOpen}
+        onClose={() => setIsScanModalOpen(false)}
+        onColorSaved={(newColor) => {
           setSelectedColor(newColor);
           setIsModalOpen(true);
         }}

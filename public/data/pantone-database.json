@@ -8,7 +8,15 @@
     "formula": [
       {
         "baseName": "PANTONE Yellow PY12",
-        "percentage": 100
+        "percentage": 77.44
+      },
+      {
+        "baseName": "PANTONE Orange 016",
+        "percentage": 0.94
+      },
+      {
+        "baseName": "PANTONE Trans. Wt.",
+        "percentage": 21.62
       }
     ]
   },
@@ -177,11 +185,19 @@
     "formula": [
       {
         "baseName": "PANTONE Yellow PY12",
-        "percentage": 12.5
+        "percentage": 15.43
+      },
+      {
+        "baseName": "PANTONE Orange 016",
+        "percentage": 0.41
+      },
+      {
+        "baseName": "PANTONE Opaque Wt.",
+        "percentage": 14.03
       },
       {
         "baseName": "PANTONE Trans. Wt.",
-        "percentage": 87.5
+        "percentage": 70.13
       }
     ]
   },
@@ -194,11 +210,19 @@
     "formula": [
       {
         "baseName": "PANTONE Yellow PY12",
-        "percentage": 25
+        "percentage": 13.6
+      },
+      {
+        "baseName": "PANTONE Orange 016",
+        "percentage": 0.25
+      },
+      {
+        "baseName": "PANTONE Opaque Wt.",
+        "percentage": 31.74
       },
       {
         "baseName": "PANTONE Trans. Wt.",
-        "percentage": 75
+        "percentage": 54.41
       }
     ]
   },
@@ -211,11 +235,15 @@
     "formula": [
       {
         "baseName": "PANTONE Yellow PY12",
-        "percentage": 50
+        "percentage": 52.17
+      },
+      {
+        "baseName": "PANTONE Orange 016",
+        "percentage": 0.4
       },
       {
         "baseName": "PANTONE Trans. Wt.",
-        "percentage": 50
+        "percentage": 47.43
       }
     ]
   },
@@ -228,11 +256,19 @@
     "formula": [
       {
         "baseName": "PANTONE Yellow PY12",
-        "percentage": 95
+        "percentage": 63.32
+      },
+      {
+        "baseName": "PANTONE Orange 016",
+        "percentage": 1.88
+      },
+      {
+        "baseName": "PANTONE Black",
+        "percentage": 2.12
       },
       {
         "baseName": "PANTONE Trans. Wt.",
-        "percentage": 5
+        "percentage": 32.68
       }
     ]
   },
@@ -4296,15 +4332,15 @@
     "formula": [
       {
         "baseName": "PANTONE Pro. Blue",
-        "percentage": 9.38
+        "percentage": 5.06
       },
       {
-        "baseName": "PANTONE Reflex Blue",
-        "percentage": 3.13
+        "baseName": "PANTONE Violet v2",
+        "percentage": 1.98
       },
       {
         "baseName": "PANTONE Trans. Wt.",
-        "percentage": 87.49
+        "percentage": 92.96
       }
     ]
   },
@@ -4317,15 +4353,15 @@
     "formula": [
       {
         "baseName": "PANTONE Pro. Blue",
-        "percentage": 18.75
+        "percentage": 10.5
       },
       {
-        "baseName": "PANTONE Reflex Blue",
-        "percentage": 6.25
+        "baseName": "PANTONE Violet v2",
+        "percentage": 4
       },
       {
         "baseName": "PANTONE Trans. Wt.",
-        "percentage": 75
+        "percentage": 85.5
       }
     ]
   },
@@ -4338,15 +4374,15 @@
     "formula": [
       {
         "baseName": "PANTONE Pro. Blue",
-        "percentage": 37.5
+        "percentage": 37.11
       },
       {
-        "baseName": "PANTONE Reflex Blue",
-        "percentage": 12.5
+        "baseName": "PANTONE Violet v2",
+        "percentage": 13.75
       },
       {
         "baseName": "PANTONE Trans. Wt.",
-        "percentage": 50
+        "percentage": 49.14
       }
     ]
   },
@@ -4359,15 +4395,11 @@
     "formula": [
       {
         "baseName": "PANTONE Pro. Blue",
-        "percentage": 71.25
+        "percentage": 77.2
       },
       {
-        "baseName": "PANTONE Reflex Blue",
-        "percentage": 23.75
-      },
-      {
-        "baseName": "PANTONE Trans. Wt.",
-        "percentage": 5
+        "baseName": "PANTONE Violet v2",
+        "percentage": 22.8
       }
     ]
   },
@@ -4380,19 +4412,15 @@
     "formula": [
       {
         "baseName": "PANTONE Pro. Blue",
-        "percentage": 63.75
+        "percentage": 65.18
       },
       {
-        "baseName": "PANTONE Reflex Blue",
-        "percentage": 21.25
+        "baseName": "PANTONE Violet v2",
+        "percentage": 31.33
       },
       {
         "baseName": "PANTONE Black",
-        "percentage": 10
-      },
-      {
-        "baseName": "PANTONE Trans. Wt.",
-        "percentage": 5
+        "percentage": 3.49
       }
     ]
   },
@@ -4405,19 +4433,15 @@
     "formula": [
       {
         "baseName": "PANTONE Pro. Blue",
-        "percentage": 56.25
+        "percentage": 59.63
       },
       {
-        "baseName": "PANTONE Reflex Blue",
-        "percentage": 18.75
+        "baseName": "PANTONE Violet v2",
+        "percentage": 32.43
       },
       {
         "baseName": "PANTONE Black",
-        "percentage": 20
-      },
-      {
-        "baseName": "PANTONE Trans. Wt.",
-        "percentage": 5
+        "percentage": 7.94
       }
     ]
   },

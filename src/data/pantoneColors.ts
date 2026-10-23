@@ -1,7 +1,7 @@
 import { PantoneColor } from '@/types/pantone';
 
 export const PANTONE_COLORS: PantoneColor[] = [
-  // --- AMARILLOS ---
+  // --- AMARILLOS (Fórmulas calibradas de guía física Pantone) ---
   {
     id: 'pantone-100-c',
     code: '100 C',
@@ -9,8 +9,10 @@ export const PANTONE_COLORS: PantoneColor[] = [
     hex: '#F6EB61',
     family: 'Amarillos',
     formula: [
-      { baseName: 'PANTONE Yellow PY12', percentage: 12.50 },
-      { baseName: 'PANTONE Trans. Wt.', percentage: 87.50 },
+      { baseName: 'PANTONE Yellow PY12', percentage: 15.43 },
+      { baseName: 'PANTONE Orange 016', percentage: 0.41 },
+      { baseName: 'PANTONE Opaque Wt.', percentage: 14.03 },
+      { baseName: 'PANTONE Trans. Wt.', percentage: 70.13 },
     ],
   },
   {
@@ -20,8 +22,10 @@ export const PANTONE_COLORS: PantoneColor[] = [
     hex: '#F4ED47',
     family: 'Amarillos',
     formula: [
-      { baseName: 'PANTONE Yellow PY12', percentage: 25.00 },
-      { baseName: 'PANTONE Trans. Wt.', percentage: 75.00 },
+      { baseName: 'PANTONE Yellow PY12', percentage: 13.60 },
+      { baseName: 'PANTONE Orange 016', percentage: 0.25 },
+      { baseName: 'PANTONE Opaque Wt.', percentage: 31.74 },
+      { baseName: 'PANTONE Trans. Wt.', percentage: 54.41 },
     ],
   },
   {
@@ -31,8 +35,9 @@ export const PANTONE_COLORS: PantoneColor[] = [
     hex: '#FCE300',
     family: 'Amarillos',
     formula: [
-      { baseName: 'PANTONE Yellow PY12', percentage: 50.00 },
-      { baseName: 'PANTONE Trans. Wt.', percentage: 50.00 },
+      { baseName: 'PANTONE Yellow PY12', percentage: 52.17 },
+      { baseName: 'PANTONE Orange 016', percentage: 0.40 },
+      { baseName: 'PANTONE Trans. Wt.', percentage: 47.43 },
     ],
   },
   {
@@ -42,7 +47,9 @@ export const PANTONE_COLORS: PantoneColor[] = [
     hex: '#FED100',
     family: 'Amarillos',
     formula: [
-      { baseName: 'PANTONE Yellow PY12', percentage: 100.00 },
+      { baseName: 'PANTONE Yellow PY12', percentage: 77.44 },
+      { baseName: 'PANTONE Orange 016', percentage: 0.94 },
+      { baseName: 'PANTONE Trans. Wt.', percentage: 21.62 },
     ],
   },
   {
@@ -52,13 +59,14 @@ export const PANTONE_COLORS: PantoneColor[] = [
     hex: '#C69214',
     family: 'Amarillos',
     formula: [
-      { baseName: 'PANTONE Yellow PY12', percentage: 87.50 },
-      { baseName: 'PANTONE Black', percentage: 6.25 },
-      { baseName: 'PANTONE Trans. Wt.', percentage: 6.25 },
+      { baseName: 'PANTONE Yellow PY12', percentage: 63.32 },
+      { baseName: 'PANTONE Orange 016', percentage: 1.88 },
+      { baseName: 'PANTONE Black', percentage: 2.12 },
+      { baseName: 'PANTONE Trans. Wt.', percentage: 32.68 },
     ],
   },
 
-  // --- AZULES ---
+  // --- AZULES (Fórmulas calibradas de guía física Pantone) ---
   {
     id: 'pantone-283-c',
     code: '283 C',
@@ -66,8 +74,9 @@ export const PANTONE_COLORS: PantoneColor[] = [
     hex: '#9BCBEB',
     family: 'Azules',
     formula: [
-      { baseName: 'PANTONE Pro. Blue', percentage: 6.25 },
-      { baseName: 'PANTONE Trans. Wt.', percentage: 93.75 },
+      { baseName: 'PANTONE Pro. Blue', percentage: 5.06 },
+      { baseName: 'PANTONE Violet v2', percentage: 1.98 },
+      { baseName: 'PANTONE Trans. Wt.', percentage: 92.96 },
     ],
   },
   {
@@ -77,9 +86,9 @@ export const PANTONE_COLORS: PantoneColor[] = [
     hex: '#6CACE4',
     family: 'Azules',
     formula: [
-      { baseName: 'PANTONE Pro. Blue', percentage: 18.75 },
-      { baseName: 'PANTONE Reflex Blue', percentage: 3.12 },
-      { baseName: 'PANTONE Trans. Wt.', percentage: 78.13 },
+      { baseName: 'PANTONE Pro. Blue', percentage: 10.50 },
+      { baseName: 'PANTONE Violet v2', percentage: 4.00 },
+      { baseName: 'PANTONE Trans. Wt.', percentage: 85.50 },
     ],
   },
   {
@@ -89,8 +98,9 @@ export const PANTONE_COLORS: PantoneColor[] = [
     hex: '#0072CE',
     family: 'Azules',
     formula: [
-      { baseName: 'PANTONE Pro. Blue', percentage: 87.50 },
-      { baseName: 'PANTONE Reflex Blue', percentage: 12.50 },
+      { baseName: 'PANTONE Pro. Blue', percentage: 37.11 },
+      { baseName: 'PANTONE Violet v2', percentage: 13.75 },
+      { baseName: 'PANTONE Trans. Wt.', percentage: 49.14 },
     ],
   },
   {
@@ -100,8 +110,8 @@ export const PANTONE_COLORS: PantoneColor[] = [
     hex: '#0033A0',
     family: 'Azules',
     formula: [
-      { baseName: 'PANTONE Reflex Blue', percentage: 75.00 },
-      { baseName: 'PANTONE Pro. Blue', percentage: 25.00 },
+      { baseName: 'PANTONE Pro. Blue', percentage: 77.20 },
+      { baseName: 'PANTONE Violet v2', percentage: 22.80 },
     ],
   },
   {
@@ -111,8 +121,9 @@ export const PANTONE_COLORS: PantoneColor[] = [
     hex: '#00205B',
     family: 'Azules',
     formula: [
-      { baseName: 'PANTONE Reflex Blue', percentage: 87.50 },
-      { baseName: 'PANTONE Pro. Blue', percentage: 12.50 },
+      { baseName: 'PANTONE Pro. Blue', percentage: 65.18 },
+      { baseName: 'PANTONE Violet v2', percentage: 31.33 },
+      { baseName: 'PANTONE Black', percentage: 3.49 },
     ],
   },
   {
@@ -122,9 +133,9 @@ export const PANTONE_COLORS: PantoneColor[] = [
     hex: '#002D62',
     family: 'Azules',
     formula: [
-      { baseName: 'PANTONE Reflex Blue', percentage: 87.50 },
-      { baseName: 'PANTONE Black', percentage: 6.25 },
-      { baseName: 'PANTONE Trans. Wt.', percentage: 6.25 },
+      { baseName: 'PANTONE Pro. Blue', percentage: 59.63 },
+      { baseName: 'PANTONE Violet v2', percentage: 32.43 },
+      { baseName: 'PANTONE Black', percentage: 7.94 },
     ],
   },
 
